@@ -8,12 +8,12 @@ import com.example.hw_61.databinding.ActivitySecondBinding
 
 class ResultActivity : AppCompatActivity() {
 
-    private val binding: ActivitySecondBinding by lazy {
-        ActivitySecondBinding.inflate(layoutInflater)
-    }
+    private lateinit  var binding: ActivitySecondBinding
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        binding = ActivitySecondBinding.inflate(layoutInflater)
         setContentView(binding.root)
         getText()
         backResult()
