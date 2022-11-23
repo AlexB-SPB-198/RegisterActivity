@@ -1,5 +1,9 @@
 <resources>
     <string name="app_name">RegisterActivity</string>
+    <string name="text">text</string>
+    <string name="send">send</string>
+    <string name="sectext">text</string>
+    <string name="backsend">back send</string>
 
 
 </resources>

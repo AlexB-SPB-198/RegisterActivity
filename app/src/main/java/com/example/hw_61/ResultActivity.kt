@@ -9,7 +9,10 @@ import com.example.hw_61.databinding.ActivitySecondBinding
 class ResultActivity : AppCompatActivity() {
 
     private lateinit  var binding: ActivitySecondBinding
-
+    companion object{
+        private  const val KEY_SEND = "key"
+        private const val KEY_BACK = "key_result"
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,13 +39,13 @@ class ResultActivity : AppCompatActivity() {
 
     fun getText(){
         val extras: Bundle? = intent.extras
-        val title = extras?.getString("key")
+        val title = extras?.getString(KEY_SEND)
         binding.edText.setText(title)
     }
 
     fun intent(text:String){
         val intent = Intent()
-        intent.putExtra("key_result", text)
+        intent.putExtra(KEY_BACK, text)
         setResult(RESULT_OK, intent)
         finish()
     }

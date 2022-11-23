@@ -12,7 +12,10 @@ import com.example.hw_61.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
-
+    companion object{
+        private  const val KEY_SEND = "key"
+        private const val KEY_BACK = "key_result"
+    }
 
     private lateinit var launchResult: ActivityResultLauncher<Intent>
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -44,7 +47,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun intent(text: String) {
         val intent = Intent(this, ResultActivity::class.java)
-        intent.putExtra("key", text)
+        intent.putExtra(KEY_SEND, text)
         launchResult.launch(intent)
     }
 
@@ -52,10 +55,11 @@ class MainActivity : AppCompatActivity() {
         launchResult = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
             if (it.resultCode == Activity.RESULT_OK) {
                 val intent: Intent? = it.data
-                val title = intent?.getStringExtra("key_result")
+                val title = intent?.getStringExtra(KEY_BACK)
                 binding.edText.setText(title)
             }
         }
     }
+
 
 }

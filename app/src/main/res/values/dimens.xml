@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_et">16dp</dimen>
+    <dimen name="indentet">16dp</dimen>
+    <dimen name="indentbtn">12dp</dimen>
+</resources>

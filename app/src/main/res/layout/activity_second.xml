@@ -13,8 +13,8 @@
         android:id="@+id/ed_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:hint="text"
+        android:layout_margin="@dimen/indentet"
+        android:hint="@string/sectext"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textStyle="bold"
@@ -25,10 +25,10 @@
         android:id="@+id/btn_back_send"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="12dp"
+        android:padding="@dimen/indentbtn"
         android:background="@drawable/corner_radius"
         android:layout_gravity="center_horizontal"
-        android:text="back send" />
+        android:text="@string/backsend" />
 
 
 </LinearLayout>
